@@ -24,14 +24,16 @@ def main():
     if len(pep_array)>1:
         matrix=[]
         for i in range(0,len(pep_array)):
-            matrix.append(pep_array[i][2].split(','))
+            matrix.append(pep_array[i][3].split(','))
 
         dataMatrix=numpy.array(matrix,dtype=float)
-        d = sch.distance.pdist(dataMatrix,'euclidean')# vector of pairwise distances
-        D = sch.distance.squareform(d)
-        L = sch.linkage(D, method='centroid')
-        ind = sch.fcluster(L,0.7*max(L[:,2]),'distance')
-        print d,D,L,max(L[:,2]),ind
+        D = sch.distance.pdist(dataMatrix,'correlation')# vector of pairwise distances
+        L = sch.linkage(D, 'single','correlation')
+        ind = sch.fcluster(L,0.2,'distance')#distance is dissmilarity(1-correlation)
+        print gene,len(pep_array)
+        print D
+        print L
+        print ind
         p=numpy.array(pep_array)
         p=numpy.column_stack([p,ind])
         formatoutput(p)
@@ -57,7 +59,7 @@ if __name__=='__main__':
     
     output=open(sys.argv[2],'w')
     output.write(firstline)
-    for i in range(0,len(genelist)):
+    for i in range(0,10):
         gene=genelist[i]
         main()
         if i%1000==0:
