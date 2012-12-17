@@ -29,11 +29,7 @@ def main():
         dataMatrix=numpy.array(matrix,dtype=float)
         D = sch.distance.pdist(dataMatrix,'correlation')# vector of pairwise distances
         L = sch.linkage(D, 'single','correlation')
-        ind = sch.fcluster(L,0.2,'distance')#distance is dissmilarity(1-correlation)
-        print gene,len(pep_array)
-        print D
-        print L
-        print ind
+        ind = sch.fcluster(L,0.3,'distance')#distance is dissmilarity(1-correlation)
         p=numpy.array(pep_array)
         p=numpy.column_stack([p,ind])
         formatoutput(p)
@@ -59,7 +55,7 @@ if __name__=='__main__':
     
     output=open(sys.argv[2],'w')
     output.write(firstline)
-    for i in range(0,10):
+    for i in range(0,len(genelist)):
         gene=genelist[i]
         main()
         if i%1000==0:
