@@ -28,6 +28,8 @@ EXAMPLE1
 python pqpq2.py --in file1 --out file2 --metric correlation --method complete --ratio True --log True --reference 1
 
 '--metric': Available options are correlation (default),cosine, euclidean. 
+For all available clustering metric, check on website http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.pdist.html?highlight=distance.pdist#scipy.spatial.distance.pdist
+
 
 '--method': options are: complete (default),average, single, weighted.
 
