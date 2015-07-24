@@ -30,7 +30,7 @@ python pqpq2.py --in file1 --out file2 --metric correlation --method --ratio Tru
 
 '--method': options are: complete (default),average, single, weighted.
 
-'--t': distance cutoff used to split clusters
+'--t': distance cutoff used to split clusters. Default value is set 0.4.
 
 '--in': input filename. Tab delimited PSM or Peptide table.
 
