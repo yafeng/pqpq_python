@@ -1,5 +1,6 @@
 # pqpq_python
-Rewirte pqpq in python, do clustering at peptide level
+Rewirte PQPQ in python, do clustering at peptide or psm level.
+
 Written by Yafeng Zhu at Karolinska institutet, Sweden.
 
 Email: yafeng.zhu@ki.se
