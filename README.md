@@ -25,7 +25,7 @@ Peptide sequences and protein accessions locate in first and second column respe
 
 EXAMPLE1
 
-python pqpq2.py --in file1 --out file2 --metric correlation --method --ratio True --log True --reference 1
+python pqpq2.py --in file1 --out file2 --metric correlation --method complete --ratio True --log True --reference 1
 
 '--metric': Available options are correlation (default),cosine, euclidean. 
 
