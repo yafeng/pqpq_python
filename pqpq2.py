@@ -62,7 +62,7 @@ if __name__=='__main__':
     ################  Comand-line arguments ################
     if len(sys.argv[1:])<=1:  ### Indicates that there are insufficient number of command-line arguments
         print "Warning! wrong command, please read the mannual in Readme.txt."
-        print "Example: python clusterpeptide.py --i heavy_pepdata.txt --o heavy_pepcluster.txt --metric correlation --method complete --t 0.4"
+        print "Example: python pqpq2.py --in file1 --out file2 --method correlation --ratio True --log True --reference 1"
     else:
         options, remainder = getopt.getopt(sys.argv[1:],'', ['metric=',
                                                              'method=',
@@ -79,7 +79,7 @@ if __name__=='__main__':
             elif opt == '--in':infilename=arg
             elif opt == '--out':outfilename=arg
             elif opt == '--log': log_transform=arg
-            elif opt == '--reference':ref=arg
+            elif opt == '--reference':ref=int(arg)
             elif opt == '--ratio':calculate_ratio=arg
             else:
                 print "Warning! Command-line argument: %s not recognized. Exiting..." % opt; sys.exit()

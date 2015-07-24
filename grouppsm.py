@@ -31,6 +31,8 @@ def main():
             median_round=[ '%.2f' % elem for elem in median ]
             newline="%s\t%s\t%s\n" % (pep,protein,'\t'.join(median_round))
             output.write(newline)
+        else:
+            print "none recognized method";sys.exit()
 
 if __name__=='__main__':
     ################  Default  ################
@@ -38,7 +40,7 @@ if __name__=='__main__':
     ################  Comand-line arguments ################
     if len(sys.argv[1:])<=1:  ### Indicates that there are insufficient number of command-line arguments
         print "Warning! wrong command, please read the mannual in Readme.txt."
-        print "Example: python mergepsm.py --in psmtable.txt -out peptidetable.txt --method median"
+        print "Example: python grouppsm.py --in psmtable.txt -out peptidetable.txt --method median"
     else:
         options, remainder = getopt.getopt(sys.argv[1:],'', ['method=','in=','out='])
         for opt, arg in options:
