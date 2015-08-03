@@ -47,8 +47,10 @@ For all available clustering metric, check on website http://docs.scipy.org/doc/
 
 
 EXAMPLE2
+If you have a PSM table, but want to do clustering at peptide level. You can use script grouppsm.py to merge psm data into peptide level. Note: In order to detect potential PTMs clustering, you need to differentiate peptide sequences of PTMs to those without PTMs before you group PSMs table to peptide table.
 
-If you have a PSM table, but want to do clustering at peptide level. You can use script grouppsm.py to merge psm data into peptide level.
+For example:
+FYT+79.966DIDELGK is a peptide with phospho mod at Threonine(T), same peptide seq without mods can be written as FYTDIDELGK. Or it can be FYtDIDELGK (modifiied amimo acid is in lower case) vs FYTDIDELGK. As long as you make the sequence different in a way, modified peptides won't be groupped into peptides without modifications.
 
 python grouppsm.py --in file1 --out file2 --method median
 
