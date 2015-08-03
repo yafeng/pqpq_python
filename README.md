@@ -1,5 +1,5 @@
 # pqpq_python
-Rewirte PQPQ in python, do clustering at peptide or psm level.
+Rewrite PQPQ (originally developped in MATLAB by Dr. Jenny Shorshed) in python, do clustering at peptide or psm level.
 
 Written by Yafeng Zhu at Karolinska institutet, Sweden.
 
@@ -48,7 +48,7 @@ For all available clustering metric, check on website http://docs.scipy.org/doc/
 
 EXAMPLE2
 
-If you have a PSM table, but want to do clustering at peptide level. You can use script grouppsm.py to merge psm data into peptide level. Note: In order to detect potential PTMs clustering, you need to differentiate peptide sequences of PTMs to those without PTMs before you group PSMs table to peptide table.
+If you have a PSM table, but want to do clustering at peptide level. You can use script grouppsm.py to merge psm data into peptide level. Note: In order to detect potential PTMs clustering, you need to differentiate peptide sequences of PTMs to those without PTMs before you group PSMs table to peptide table. It is recommmended to do quantitative clustering at peptide level.
 
 For example:
 
