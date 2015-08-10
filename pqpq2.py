@@ -62,7 +62,7 @@ if __name__=='__main__':
     ################  Comand-line arguments ################
     if len(sys.argv[1:])<=1:  ### Indicates that there are insufficient number of command-line arguments
         print "Warning! wrong command, please read the mannual in Readme.txt."
-        print "Example: python pqpq2.py --in file1 --out file2 --method correlation --ratio True --log True --reference 1"
+        print "Example: python pqpq2.py --in file1 --out file2 --metric correlation --ratio True --log True --reference 1"
     else:
         options, remainder = getopt.getopt(sys.argv[1:],'', ['metric=',
                                                              'method=',
