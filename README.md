@@ -1,5 +1,5 @@
 # pqpq_python
-Rewrite PQPQ (originally developped in MATLAB by Dr. Jenny Shorshed) in python, do clustering at peptide or psm level.
+Rewrite PQPQ  in python(originally developped in MATLAB by Dr. Jenny Forshed). PQPQ is an algorithm to cluster peptides identified in mass spectrometry based their quantitative pattern across samples.
 
 Written by Yafeng Zhu at Karolinska institutet, Sweden.
 
@@ -20,7 +20,7 @@ Mol Cell Proteomics. 2014 Jun. http://www.ncbi.nlm.nih.gov/pubmed/24692640
 INPUT FORMAT:
 
 A tab delimited PSM or Peptide table. First line is header. 
-Peptide sequences and protein accessions locate in first and second column respectively.
+Peptide sequences and protein accessions locate in first and second column respectively, the rest columns can be intensity values or peptide ratios.
 
 
 EXAMPLE1
@@ -58,7 +58,3 @@ python grouppsm.py --in file1 --out file2 --method median
 
 
 '--method': options are: mean or median (default).
-
-
-
-
